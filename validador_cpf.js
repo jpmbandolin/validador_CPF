@@ -22,8 +22,8 @@ let validaCPF = cpf=>{
 		return false;
 	}
 
-	let multiplicador 			= 10;
-	let resultado 				= 0;
+	let multiplicador 		= 10;
+	let resultado 			= 0;
 	let multiplicador2Digito 	= 11;
 	let resultado2Digito 		= 0;
 
@@ -39,9 +39,9 @@ let validaCPF = cpf=>{
 	});
 
 	let validaDigitoVerificador 		= (resultado 		* 10) % 11;
-	let validaSegundoDigitoVerificador 	= (resultado2Digito * 10) % 11;
+	let validaSegundoDigitoVerificador 	= (resultado2Digito 	* 10) % 11;
 	
-	validaDigitoVerificador 		= validaDigitoVerificador 			=== 10 ? 0 : validaDigitoVerificador;
+	validaDigitoVerificador 	= validaDigitoVerificador 		=== 10 ? 0 : validaDigitoVerificador;
 	validaSegundoDigitoVerificador	= validaSegundoDigitoVerificador 	=== 10 ? 0 : validaSegundoDigitoVerificador;
 
 	return !(validaDigitoVerificador !== parseInt(arrCpf[9]) || validaSegundoDigitoVerificador !== parseInt(arrCpf[10])); //valida digito verificador e retorna
