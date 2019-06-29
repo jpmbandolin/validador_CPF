@@ -11,7 +11,7 @@ let validaCPF = cpf=>{
 		return false; // tamanho invalido
 	}
 
-	let arrCpf 		= cpf.split('');
+	let arrCpf 	= cpf.split('');
 	let indexArray 	= 0;
 
 	while(arrCpf[indexArray] === arrCpf[indexArray + 1] && indexArray <= 10){ //Verifica se todos os caracteres são iguais
